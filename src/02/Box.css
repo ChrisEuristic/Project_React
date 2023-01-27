@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
+
+.font-sol {
+  font-family: 'Solitreo', cursive;
+  padding-top: 2vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100wv;
+  height: 10vh;
+  background-color: #282828;
+  color: white;
+}
+
+h1 {
+  font-size: 5vh;
+}
+
+.rowDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px #282828;
+  border-radius: 0px;
+  width: 60vw;
+  height: 5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-top: 1vh;
+}
+
+.col {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#colrank {
+  width: 10%;
+}
+
+#colmovieNm {
+  width: 60%;
+}
+
+#colsalesAmt {
+  width: 20%;
+}
+
+#colrankInten {
+  width: 10%;
+}
