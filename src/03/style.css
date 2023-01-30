@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
+
+
+.font-sol {
+  font-family: 'Solitreo', cursive;
+  padding-top: 7px;
+}
+
+#cover {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 90vh;
+}
+
+header {
+  width: 60vw;
+  height: 7vh;
+  font-family: 'Solitreo', cursive;
+  border: solid 1px #282828;
+  background-color: #282828;
+  color: white;
+  font-size: 3em;
+  padding-top: 18px;
+  text-align: center;
+}
+
+main {
+  width: 60vw;
+  height: 83vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+  font-family: 'Solitreo', cursive;
+  border: solid 1px #282828;
+  color: #282828;
+}
+
+.mydiv1, .mydiv2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  border: solid 1px #282828;
+}
+
+.mydiv1 {
+  width: 20vw;
+  height: 83vh;
+}
+
+.mydiv2 {
+  width: 40vw;
+  height: 83vh;
+}
+
+.mydiv11, .mydiv21 {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  border: solid 1px #282828;
+}
+
+.mydiv11 {
+  width: 15vw;
+  height: 20vh;
+}
+
+.mydiv21 {
+  width: 35vw;
+  height: 20vh;
+}
+
+.divbt {
+  margin-top: 20px;
+}
+
+.divbt > button, .divbt > span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}

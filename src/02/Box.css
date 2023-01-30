@@ -26,7 +26,11 @@ h1 {
   font-size: 5vh;
 }
 
-.rowDiv {
+.rowDiv0 {
+  background-color: #f1e1b580;
+}
+
+.rowDiv, .rowDiv0 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +41,10 @@ h1 {
   padding-left: 2vw;
   padding-right: 2vw;
   margin-top: 1vh;
+}
+
+.rowDiv:hover, .rowDiv:active {
+  background-color: #f1e1b5;
 }
 
 .col {
@@ -59,4 +67,24 @@ h1 {
 
 #colrankInten {
   width: 10%;
+}
+
+.spup {
+  color: red;
+}
+
+.spdn {
+  color: blue;
+}
+
+.rowDay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282828;
+  color: white;
+  width: 60vw;
+  height: 5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }

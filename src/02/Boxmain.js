@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import './Box.css';
 
 const Boxmain = () => {
   const mvlist = [{"rnum":"1","rank":"1","rankInten":"0","rankOldAndNew":"OLD","movieCd":"20190808","movieNm":"교섭","openDt":"2023-01-18","salesAmt":"355906586","salesShare":"18.8","salesInten":"-147956429","salesChange":"-29.4","salesAcc":"12600296336","audiCnt":"36622","audiInten":"-23326","audiChange":"-38.9","audiAcc":"1234442","scrnCnt":"945","showCnt":"3700"},
@@ -11,37 +13,51 @@ const Boxmain = () => {
   {"rnum":"9","rank":"9","rankInten":"-1","rankOldAndNew":"OLD","movieCd":"20228313","movieNm":"오늘 밤, 세계에서 이 사랑이 사라진다 해도","openDt":"2022-11-30","salesAmt":"49429844","salesShare":"2.6","salesInten":"-16882910","salesChange":"-25.5","salesAcc":"10112965111","audiCnt":"4868","audiInten":"-2184","audiChange":"-31","audiAcc":"980655","scrnCnt":"241","showCnt":"355"},
   {"rnum":"10","rank":"10","rankInten":"0","rankOldAndNew":"OLD","movieCd":"20229518","movieNm":"천룡팔부: 교봉전","openDt":"2023-01-25","salesAmt":"15848197","salesShare":"0.8","salesInten":"-3804460","salesChange":"-19.4","salesAcc":"48516954","audiCnt":"1754","audiInten":"-482","audiChange":"-21.6","audiAcc":"5202","scrnCnt":"259","showCnt":"393"}];
 
+  
   let divTags = [];
-  const klist = ['rank', 'movieNm', 'salesAmt', 'rankInten'];
-  for(let item of mvlist){
-    let temp = [];
-    
-    //temp = klist.map((k) => item[k]);
-    // 이거 메모해야할듯
-    /*
-      Array Method .map()은 인자로 콜백함수를 받고, 새로운 배열을 만들어 리턴한다.
-      인자로 받은 콜백함수의 매개변수는 객체배열의 구성요소값들이 순차적으로 대입되며, 메소드 Body의 item[k]는, k에 대입된 Array의 문자열(mvlist의 Key)을 받아 return.
-    */
-    
-    temp = klist.map((k) => <span key={item.movieCd+k} className="col" id={`col${k}`}>{item[k]}</span>);
-    
-    divTags.push(<div key={item.movieCd} className="rowDiv">{temp}</div>); // 이것도 JSX 고유 문법인듯. 메모해야.
+  let flag;
+  let [dspmv, setDspmv] = useState({});
+  
+  const handleDivClick = (selmv) => {
+    setDspmv({...selmv});
+  };
 
-    // console.log(klist.map((k) => item[k]));
 
-    // console.log(item.rank + "\t" + item.movieNm + "\t" + item.audiCnt + "\t" + item.rankInten)
-    // console.log(item['rank']);
+  
+  for(let mv of mvlist){
+    console.log(mv.rank, mv.movieNm, mv.salesAmt, mv.rankInten);
+    if(mv.rankInten < 0){
+      flag = <span className="spdn">{"▼" + Math.abs(mv.rankInten)}</span>;
+    }
+    else if(mv.rankInten == 0){
+      flag = "-";
+    }
+    else {
+      flag = <span className="spup">{"▲" + Math.abs(mv.rankInten)}</span>
+    }
+      
+    divTags.push(
+      <div className="rowDiv" key={mv.movieCd} onMouseOver={() => handleDivClick(mv)}>
+        <span id="colrank" className="col">{mv.rank}</span>
+        <span id="colmovieNm" className="col">{mv.movieNm}</span>
+        <span id="colsalesAmt" className="col">{parseInt(mv.salesAmt).toLocaleString('ko-KR')}</span>
+        <span id="colrankInten" className="col">{flag}</span>
+      </div>
+    );
   }
 
   return (
     <div className="content">
-      <div className="rowDiv">
+      <div className="rowDiv0">
         <span id="colrank" className="col">순위</span>
         <span id="colmovieNm" className="col">영화명</span>
         <span id="colsalesAmt" className="col">매출액</span>
         <span id="colrankInten" className="col">증감</span>
       </div>
       {divTags}
+      <div className='rowDay'>
+        {"[" + dspmv.movieNm + "] "} 개봉일 : {dspmv.openDt}
+      </div>
     </div>
   );
 }
