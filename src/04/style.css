@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+
+.frcst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Gowun Dodum', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 10vh;
+  border: solid 1px #282828;
+  background-color: #282828;
+  color: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+  width: 80vw;
+  height: 70vh;
+  border: solid 1px #282828;
+  color: #282828;
+}
+
+.mainbox1, .mainbox2 {
+  display: flex;
+  justify-content: center;
+  border: solid 1px #282828;
+  color: #282828;
+}
+
+.mainbox1 {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainbox2 {
+  display: flex;
+  align-items: center;
+  width: 50vw;
+}
+
+.dateButton {
+  height: 3vh;
+  margin: 2px;
+}
+
+.lired {
+  color: red;
+  font-weight: bold;
+  animation-name: vive;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.liredAnim {
+  /*animation-name: vive;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;*/
+}
+
+@keyframes vive {
+  from{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
