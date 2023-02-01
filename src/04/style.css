@@ -51,8 +51,76 @@
 }
 
 .dateButton {
-  height: 3vh;
-  margin: 2px;
+  width: 8vw;
+  height: 5vh;
+  margin: 5px;
+  background-color: #282828;
+  color: white;
+  border-radius: 10px;
+}
+
+.btnInvisible0 {
+  animation-name: invisibled0;
+  animation-duration: 1s;
+  animation-iteration-count: inherit;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.btnInvisible1 {
+  animation-name: invisibled1;
+  animation-duration: 1s;
+  animation-iteration-count: inherit;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.btnInvisible2 {
+  animation-name: invisibled2;
+  animation-duration: 1s;
+  animation-iteration-count: inherit;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.btnInvisible3 {
+  animation-name: invisibled3;
+  animation-duration: 1s;
+  animation-iteration-count: inherit;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.btnVisible0 {
+  animation-name: visibled0;
+  animation-duration: 0.5s;
+  animation-iteration-count: inherit;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;  
+}
+
+.btnVisible1 {
+  animation-name: visibled1;
+  animation-duration: 0.5s;
+  animation-iteration-count: inherit;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;  
+}
+
+.btnVisible2 {
+  animation-name: visibled2;
+  animation-duration: 0.5s;
+  animation-iteration-count: inherit;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;  
+}
+
+.btnVisible3 {
+  animation-name: visibled3;
+  animation-duration: 0.5s;
+  animation-iteration-count: inherit;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;  
 }
 
 .lired {
@@ -80,5 +148,113 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes invisibled0 {
+  from {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(300px, 0);
+  }
+  to {
+    transform: translate(300px, -200px);
+  }
+}
+
+@keyframes invisibled1 {
+  from {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(300px, 0);
+  }
+  to {
+    transform: translate(300px, -255px);
+  }
+}
+
+@keyframes invisibled2 {
+  from {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(300px, 0);
+  }
+  to {
+    transform: translate(300px, -310px);
+  }
+}
+
+@keyframes invisibled3 {
+  from {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(300px, 0);
+  }
+  to {
+    transform: translate(300px, -365px);
+  }
+}
+
+@keyframes visibled0 {
+  from {
+    transform: translate(300px, -200px);
+  }
+  50% {
+    transform: translate(300px, -200px) scale(0.1);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    transform: translate(0);
+  }
+}
+
+@keyframes visibled1 {
+  from {
+    transform: translate(300px, -255px);
+  }
+  50% {
+    transform: translate(300px, -255px) scale(0.1);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    transform: translate(0);
+  }
+}
+
+@keyframes visibled2 {
+  from {
+    transform: translate(300px, -310px);
+  }
+  50% {
+    transform: translate(300px, -310px) scale(0.1);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    transform: translate(0);
+  }
+}
+
+@keyframes visibled3 {
+  from {
+    transform: translate(300px, -365px);
+  }
+  50% {
+    transform: translate(300px, -365px) scale(0.1);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    transform: translate(0);
   }
 }

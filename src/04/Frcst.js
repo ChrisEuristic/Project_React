@@ -29,12 +29,25 @@ const Frcst = () => {
         "frcstOneCn":"서울 : 낮음, 인천 : 낮음, 경기북부 : 낮음, 경기남부 : 낮음, 강원영서 : 낮음, 강원영동 : 낮음, 대전 : 낮음, 세종 : 낮음, 충남 : 낮음, 충북 : 낮음, 광주 : 낮음, 전북 : 낮음, 전남 : 낮음, 부산 : 낮음, 대구 : 낮음, 울산 : 낮음, 경북 : 낮음, 경남 : 낮음, 제주 : 낮음, 신뢰도 : 높음",
         "presnatnDt":"2023-01-30"
         }
-        ]
+        ];
+    
+    const item = items[0];
+    let frcDt = ["frcstOneDt", "frcstTwoDt", "frcstThreeDt", "frcstFourDt"];
+    let frcCn = ["frcstOneCn", "frcstTwoCn", "frcstThreeCn", "frcstFourCn"];
+
+    frcDt = frcDt.map((key) => item[key]);
+    frcCn = frcCn.map((key) => item[key]);
+    let frcstDtCn = new Object();
+
+    for(let i = 0; i < frcDt.length; i++){
+      frcstDtCn[frcDt[i]] = frcCn[i];
+    }
+    
   
     return (
       <div className="frcst">
         <Header />
-        <Main weather={items}/>
+        <Main weather={items} weather2={frcstDtCn}/>
       </div>
     ) ;
 }
