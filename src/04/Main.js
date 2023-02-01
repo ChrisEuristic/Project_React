@@ -23,6 +23,10 @@ const Main = (probs) => {
     for(let k in frcstDtCn){
       if(i == index){
         clickButton = document.querySelector("#btn" + i);
+        const dateTitle = document.querySelector(".mainbox2 > div")
+        const weatherUl = document.querySelector(".mainbox2 ul")
+        dateTitle.className = "dateTitle dateTitleAnim" + i;
+        weatherUl.className = "weatherlist weatherUlAnim" + i;
         clickButton.className = "dateButton btnInvisible" + i;
       }
       else {
@@ -53,7 +57,7 @@ const Main = (probs) => {
   return (
     <div className="main">
       <MainBox1 setWeather={setWeather} date={frcstDtCn} clicked={clickedButton}/>
-      <MainBox2 chooseWeather={finalChooseweather}/>
+      <MainBox2 chooseWeather={finalChooseweather} date={frcstDtCn} clicked={clickedButton}/>
     </div>
   );
 };
