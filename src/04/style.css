@@ -60,6 +60,20 @@
   border: none;
 }
 
+.dateButton:hover {
+  border: solid 1px #282828;
+  background-color: white;
+  color: #282828;
+  box-shadow: #282828 2px 2px 2px;
+}
+
+.dateButton:active {
+  border: solid 1px #282828;
+  background-color: white;
+  color: #282828;
+  box-shadow: #282828 2px 2px 2px inset;
+}
+
 .dateTitle {
   width: 0vw;
   height: 5vh;

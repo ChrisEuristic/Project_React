@@ -45,11 +45,17 @@ const Main = (probs) => {
 
     infoArry = frcstDtCn[date].split(",");
 
-    infoArry = infoArry.map((item) => 
-      item.includes('높음') ? 
-      <li key={`${item}`} className="liredAnim">{item.split(":")[0] + " : "}<span className='lired'>{item.split(":")[1]}</span></li> : 
-      <li key={`${item}`} className="noliredAnim"><span className='liblack'></span>{item}</li>
-    );
+    // infoArry = infoArry.map((item) => 
+    //   item.includes('높음') ? 
+    //   <li key={`${item}`} className="liredAnim">{item.split(":")[0] + " : "}<span className='lired'>{item.split(":")[1]}</span></li> : 
+    //   <li key={`${item}`} className="noliredAnim"><span className='liblack'></span>{item}</li>
+    // );
+    infoArry = infoArry.map((item) => {
+      if(item.includes('높음'))
+        return <li key={`${item}`} className="liredAnim">{item.split(":")[0] + " : "}<span className='lired'>{item.split(":")[1]}</span></li>
+      else
+        return <li key={`${item}`} className="noliredAnim"><span className='liblack'></span>{item}</li>
+    });
     setFinalChooseWeather(infoArry);
     //console.log(infoArry);
   };

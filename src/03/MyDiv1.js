@@ -1,6 +1,6 @@
 /* useState 실습 */
 import MyDiv11 from './MyDiv11';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './style.css'
 const MyDiv1 = (probs) => {
   const user = probs.user;
@@ -8,8 +8,12 @@ const MyDiv1 = (probs) => {
 
   const addCnt = () => {
     setCnt(++cnt);
-    console.log(cnt);
   };
+
+  useEffect( () => {
+    probs.upN(cnt);
+  },[cnt]);
+
   return (
     <div className='mydiv1'>
       <h2>MyDiv1</h2>
