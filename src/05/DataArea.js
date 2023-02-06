@@ -4,29 +4,33 @@ const DataArea = (probs) => {
   let taccidentCount;
   let critical;
 
-  if(probs.name){
+  if(!(JSON.stringify(probs.name) == JSON.stringify({}))){
     dataTable = dataTable.map((key) => {
       if(key == "사고건수")
         taccidentCount = parseInt(probs.name[key]);
       if(key == "사망자수")
         critical = parseInt(probs.name[key]) / taccidentCount;
       if(key == "치명률")
-        return <tr><td className="thead">{key}</td><td className="tbody" style={{color: 'red'}}>{`${Math.round(critical * 1000)/10}%`}</td></tr>
+        return <tr key={`tr${key}`}><td className="thead" key={`th${key}`}>{key}</td><td className="tbody" key={`td${key}`} style={{color: 'red'}}>{`${Math.round(critical * 1000)/10}%`}</td></tr>
       if(key == "사고유형_대분류" || key == "사고유형_중분류")
-        return <tr><td className="thead">{key}</td><td className="tbody">{probs.name[key]}</td></tr>
+        return <tr key={`tr${key}`}><td className="thead" key={`th${key}`}>{key}</td><td className="tbody" key={`td${key}`}>{probs.name[key]}</td></tr>
       else
-        return <tr><td className="thead">{key}</td><td className="tbody">{parseInt(probs.name[key]).toLocaleString()}</td></tr>
+        return <tr key={`tr${key}`}><td className="thead" key={`th${key}`}>{key}</td><td className="tbody" key={`td${key}`}>{parseInt(probs.name[key]).toLocaleString()}</td></tr>
     });
   }
   else
     dataTable = [];
+
+  
 
   return (
     <div className="data">
       <div className="data-title">상세내용</div>
       <div className="data-tableArea">
         <table>
-          {dataTable}
+          <tbody>
+            {dataTable}
+          </tbody>
         </table>
       </div>
     </div>

@@ -1,0 +1,16 @@
+.outLine {
+  position: relative;
+  width: 200px;
+  height: 20px;
+  border: solid 1px #CCCCCC;
+}
+
+.underLine {
+  position: absolute;
+  background-color: #282828;
+  right: 0; bottom: 0px; width: 0; height: 1px; transition: ease-in-out 0.5s;  
+}
+
+.outLine:hover .underLine {
+  width: 100%;
+}

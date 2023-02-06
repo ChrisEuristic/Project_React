@@ -153,8 +153,8 @@ const Taccident = () => {
 
   let c1 = [];
   let c2 = [];
-  let data = {};
-
+  //let data = {};
+  
   // Making C1
   apiData.data.forEach((item) => {
     c1.push(item.사고유형_대분류);
@@ -162,13 +162,13 @@ const Taccident = () => {
   const setC1 = new Set(c1);
   c1.length = 0;
   c1 = [...setC1];
-  console.log(c1);
+  //console.log(c1);
 
   // Making C2
   apiData.data = apiData.data.map((item) => [item.사고유형_대분류, item]);
   
   // C1.data to Main function
-  let [clickedC1, setClickedC1] = useState(0);
+  let [clickedC1, setClickedC1] = useState(9);
   const setClickedC1Button = (clickedNumber) => {
     setClickedC1(clickedNumber);
     console.log(clickedNumber);
@@ -178,7 +178,7 @@ const Taccident = () => {
   let [buttonSetArr, setButtonSetArr] = useState([]);
 
   // C2.data to Main function
-  let [clickedC2, setClickedC2] = useState(0);
+  let [clickedC2, setClickedC2] = useState(9);
   const setClickedC2Button = (clickedNumber) => {
     setClickedC2(clickedNumber);
   }
@@ -189,18 +189,20 @@ const Taccident = () => {
       c2.push(apiData.data[i][1].사고유형_중분류);
     }
   }
-
+  
   // Making Data Object
+  let [data, setData] = useState({});
   for(let i = 0; i < apiData.data.length; i++){
     if(apiData.data[i][0] == c1[clickedC1]){
       if(apiData.data[i][1].사고유형_중분류 == c2[clickedC2])
         data = apiData.data[i][1];
     }
   }
+
   
   useEffect(() => {
-    console.log(clickedC1);
-    setClickedC2(0);
+    //console.log(clickedC1);
+    setClickedC2(9);
   }, [clickedC1]);
 
   return (
