@@ -9,11 +9,12 @@
 }
 
 .header {
-
+  width: 60vw;
 }
 
 .main {
-
+  width: 60vw;
+  border-bottom: #282828 solid 5px;
 }
 
 .buttonArea {
@@ -22,7 +23,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid 1px #282828;
   width: 20vw;
   height: 60vh;
   margin-top: 5vh;
@@ -30,12 +30,30 @@
 
 .button {
   background-color: #fff;
-  width: 15vw;
-  height: 3vh;
+  width: 12vw;
+  height: 7vh;
   border: #282828 solid 1px;
   border-radius: 0.5vw;
   margin-top: 1vh;
   margin-bottom: 1vh;
+  padding-bottom: .5vh;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 1em;
+}
+
+.button:hover {
+  color: #282828;
+  box-shadow: #282828 2px 2px 2px;
+  font-weight: bold;
+  transition-duration: 200ms;
+}
+
+.button:active {
+  background-color: #2828287e;
+  color: white;
+  box-shadow: #282828 2px 2px 2px inset;
+  font-weight: bold;
+  transition-duration: 100ms;
 }
 
 .endContent {
@@ -43,22 +61,27 @@
   flex-direction: column;
   justify-content: top;
   align-items: center;
-  border: solid 1px #282828;
   width: 30vw;
   height: 60vh;
   margin-top: 5vh;
 }
 
 .imageArea {
-  margin-top: 5vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .image {
+  border-radius: 20px;
   width: 25vw;
   height: 25vh;
+  box-shadow: #282828 2px 2px 2px;
 }
 
-.textArea { width: 25vw; }
+.textArea { 
+  width: 21vw;
+  padding-left: 0vw;
+ }
 .titleBox {
   font-weight: bold;
   font-size: 1.5em;

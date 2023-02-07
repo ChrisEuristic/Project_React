@@ -41,7 +41,7 @@ const Gal = () => {
             {
               "galContentId": "2585036",
               "galContentTypeId": "17",
-              "galTitle": "부산 크리스마스 트리문화축제",
+              "galTitle": "부산 X-MAS 트리문화축제",
               "galWebImageUrl": "http://tong.visitkorea.or.kr/cms2/website/36/2585036.jpg",
               "galCreatedtime": "20190103182338",
               "galModifiedtime": "20190103182702",
@@ -150,7 +150,7 @@ const Gal = () => {
   return (
     <div className="content">
       <div className="header">
-        과제명
+        부산관광공사 실습
       </div>
       <div className="main">
         <div className="buttonArea">

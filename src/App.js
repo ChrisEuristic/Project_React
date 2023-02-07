@@ -5,6 +5,7 @@ import Frcst from './04/Frcst';
 import Taccident from './05/Taccident';
 import Test from './00/Test';
 import Gal from './06/Gal';
+import MyCom from './07/MyCom';
 
 const App = () => {
   
@@ -14,7 +15,8 @@ const App = () => {
     //<MyDiv />
     //<Frcst />
     //<Taccident />
-    <Gal />
+    //<Gal />
+    <MyCom />
   );
 }
 
