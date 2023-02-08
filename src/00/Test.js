@@ -1,4 +1,4 @@
-import './style.css'
+import './style00.css'
 
 const Test = () => {
   return (
