@@ -18,7 +18,6 @@
 }
 
 .buttonArea {
-  
   display: flex;
   flex-direction: column;
   justify-content: top;
@@ -52,6 +51,57 @@
   background-color: #2828287e;
   color: white;
   box-shadow: #282828 2px 2px 2px inset;
+  font-weight: bold;
+  transition-duration: 100ms;
+}
+
+input[type=text] {
+  width: 8vw;
+  height: 3vh;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  border: #282828 solid 1px;
+  border-radius: 5px;
+}
+
+input[type=text]:focus {
+  outline: none;
+  width: 8vw;
+  height: 3vh;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+}
+
+input[type=reset] {
+  background-color: #fff;
+  width: 2vw;
+  height: 3vh;
+  border: #282828 solid 1px;
+  border-radius: 0.5vw;
+  margin-left: 0.5vw;
+  padding-bottom: .2vh;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+input[type=reset]:hover {
+  color: #282828;
+  box-shadow: #282828 1px 1px 1px;
+  font-weight: bold;
+  transition-duration: 200ms;
+}
+
+input[type=reset]:active {
+  background-color: #2828287e;
+  color: white;
+  box-shadow: #282828 1px 1px 1px inset;
   font-weight: bold;
   transition-duration: 100ms;
 }
@@ -90,4 +140,27 @@
 .cityBox { font-size: 1.2em; }
 .keywordBox {
   margin-top: 2vh;
+}
+
+select {
+  border: #282828 solid 1px;
+  border-radius: 5px;
+  width: 12vw;
+  height: 4vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  padding-left: 1vw;
+  padding-bottom: 0.2vh;
+  appearance: none;
+  background: url(./downArrow.png) no-repeat right 10px center;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 1em;
+}
+
+select:hover {
+  font-weight: bold;
+}
+
+select:focus {
+  outline: none;
 }

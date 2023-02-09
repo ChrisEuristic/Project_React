@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import GalSelect from "./GalSelect";
 
 const ButtonArea = (props) => {
   let title = [];
@@ -6,7 +7,6 @@ const ButtonArea = (props) => {
   const inputRef = useRef(null);
   const [name, setName] = useState("");
   const [titleArr, setTitleArr] = useState();
-  const [testPromise, setTestPromise] = useState();
 
   const testFunction = () => {
     return new Promise((resolve, reject) => {
@@ -20,7 +20,6 @@ const ButtonArea = (props) => {
 
   const refresh = () => {
     for(let key in filteringTitle){
-      ;
       title.push(<button key={`key${key}`} className="button" onClick={() => props.selectButton(props.buttonName.indexOf(filteringTitle[key]))}>{filteringTitle[key]}</button>)
     }
     setTitleArr(title);
@@ -44,6 +43,8 @@ const ButtonArea = (props) => {
         <form>
           <input ref={inputRef} type='text' onChange={showTitle}/>
           <input type='reset' value='취소' onClick={() => setTimeout(() => {showTitle()}, 10)} />
+          <br />
+          <GalSelect selectButton={props.selectButton} />
         </form>
       </div>
       {titleArr}
