@@ -5,9 +5,10 @@
 // import Taccident from './05/Taccident';
 // import Test from './00/Test';
 // import Gal from './06/Gal';
-import RouteMain from './09/RouteMain';
 // import MyCom from './07/MyCom';
 // import MyForm from './08/MyForm';
+import RouteMain from './09/RouteMain';
+import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
   
@@ -20,7 +21,9 @@ const App = () => {
     //<Gal />
     //<MyCom />
     //<MyForm />
-    <RouteMain />
+    <BrowserRouter>
+      <RouteMain />
+    </BrowserRouter>
   );
 }
 
