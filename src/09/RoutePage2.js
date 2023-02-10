@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 const RoutePage2 = () => {
   let location = useLocation();
   console.log("location >> ", location);
-  let item = qs.parse(location);
+  let item = qs.parse(location.search);
   console.log(item);
 
   return (

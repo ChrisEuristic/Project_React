@@ -7,7 +7,8 @@
 // import Gal from './06/Gal';
 // import MyCom from './07/MyCom';
 // import MyForm from './08/MyForm';
-import RouteMain from './09/RouteMain';
+// import RouteMain from './09/RouteMain';
+import Wmain from './10/Wmain';
 import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
@@ -21,8 +22,11 @@ const App = () => {
     //<Gal />
     //<MyCom />
     //<MyForm />
+    // <BrowserRouter>
+    //   <RouteMain />
+    // </BrowserRouter>
     <BrowserRouter>
-      <RouteMain />
+      <Wmain />
     </BrowserRouter>
   );
 }

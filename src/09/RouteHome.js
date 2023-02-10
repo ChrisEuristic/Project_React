@@ -19,7 +19,7 @@ const RouteHome = () => {
 
       <h2>파라미터 전송1</h2>
       <ul>
-        <li><Link to="/p1/사과🍎">사과🍎</Link></li>
+        <li><Link to="/p1/사과🍎/사과">사과🍎</Link></li>
         <li><Link to="/p1/토마토🍅">토마토🍅</Link></li>
         <li><Link to="/p1/딸기🍓">딸기🍓</Link></li>
       </ul>

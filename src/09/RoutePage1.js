@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 
 const RoutePage1 = () => {
   const item = useParams().items;
+  console.log("useParams() >> ", useParams());
 
   return (
     <>

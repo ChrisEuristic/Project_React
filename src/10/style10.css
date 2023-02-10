@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+* {
+  font-family: 'Gowun Dodum', sans-serif;
+}
+
+.wmain {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wheader {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  border: #282828 solid 1px;
+  border-bottom: none;
+}
+
+.header {
+  background-color: #282828;;
+  color: white;
+  width: 420px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.wmenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
+  height: 600px;
+  border: #282828 solid 1px;
+}
+
+.w1 {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  width: 420px;
+  height: 600px;
+  border: #282828 solid 1px;
+}
+
+.w2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  width: 420px;
+  height: 600px;
+  border: #282828 solid 1px;
+}
+
+.bigButton {
+  width: 300px;
+  height: 185px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  border: #282828 solid 1px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.homeButton {
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 0.5em;
+  font-weight: normal;
+  border: #282828 solid 1px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.weatherButton {
+  width: 95px;
+  height: 40px;
+  margin-left: 3px;
+  margin-right: 3px;
+  font-size: .8em;
+  border: #282828 solid 1px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.shortWeatherDiv {
+  width: 90%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #282828 solid 1px;
+  margin: 10px;
+}
+
+.shortWeatherSpanTitle {
+  display: inline-block;
+  text-align: center;
+  width: 40%;
+  font-weight: bold;
+}
+
+.shortWeatherSpanContent {
+  display: inline-block;
+  text-align: center;
+  width: 60%;
+}
+
+.longWeatherButtonArea {
+  width: 100%;
+  height: 10%;
+  background-color: #282828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.longWeatherViewArea {
+  padding-top: 10px;
+}
+
+.longWeatherViewCard {
+  width: 400px;
+  height: 80px;
+  border: #282828 solid 1px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  color: rgb(6, 156, 156);
+  font-weight: bold;
+}
+
+.rain {
+
+}
+
+.wcontent {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(255, 86, 86);
+}
