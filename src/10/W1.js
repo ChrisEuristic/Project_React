@@ -1,10 +1,6 @@
-import { useLocation } from "react-router-dom";
-
 // 단기예보
 const W1 = (props) => {
   const itemWeatherShort = props.itemWeatherShort;
-  let {state} = useLocation();
-  console.log(state)
   
 
   let a = itemWeatherShort.map((item) => {

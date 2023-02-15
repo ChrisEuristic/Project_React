@@ -1,6 +1,8 @@
 import './style10.css';
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+
+import { HeadTitle } from './HeadTitle';
 
 
 // 헤더
@@ -8,6 +10,12 @@ const Wheader = () => {
   
   //let title = "일기예보";// 클릭이 무엇이 되었느냐에 따라 title 변수 조정
   const [title, setTitle] = useState("일기예보");
+  const headTitle = useContext(HeadTitle);
+
+  const setHeadTitle = (page, pageName) => {
+    headTitle.title = pageName;
+    navigate(page);
+  };
    
   
   const navigate = useNavigate();
@@ -16,8 +24,8 @@ const Wheader = () => {
   return (
     <>
       <div className="wheader">
-        <div className="header">{title}</div>
-        <button className='homeButton' onClick={() => navigate('/')}>{homeLogo}</button>
+        <div className="header">{headTitle.title}</div>
+        <button className='homeButton' onClick={() => setHeadTitle('/', '일기예보')}>{homeLogo}</button>
       </div>
     </>
   );

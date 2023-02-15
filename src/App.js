@@ -8,8 +8,12 @@
 // import MyCom from './07/MyCom';
 // import MyForm from './08/MyForm';
 // import RouteMain from './09/RouteMain';
-import Wmain from './10/Wmain';
-import { BrowserRouter } from 'react-router-dom';
+// import Wmain from './10/Wmain';
+// import { BrowserRouter } from 'react-router-dom';
+
+// import { HeadTitle } from './10/HeadTitle';
+// import Async from './11/Async';
+import Boxoffice from './11/Boxoffice';
 
 const App = () => {
   
@@ -25,9 +29,11 @@ const App = () => {
     // <BrowserRouter>
     //   <RouteMain />
     // </BrowserRouter>
-    <BrowserRouter>
-      <Wmain />
-    </BrowserRouter>
+    // <BrowserRouter>
+    //   <Wmain />
+    // </BrowserRouter>
+    // <Async />
+    <Boxoffice />
   );
 }
 

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+* {
+  font-family: 'Gowun Dodum', sans-serif;
+}
+
+.body {
+  width: 100vw;
+  height: 80vh;
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  width: 80vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rowLine {
+  display: inline-block;
+  width: 20vw;
+  margin: 0 5vw;
+  border-bottom: solid 1px #FFFFFF70;
+}
+
+.headerTitle {
+  font-size: 2em;
+  font-weight: bold;
+  color: #FFFFFFEE;
+}
+
+
+/* Main */
+.main {
+  width: 70vw;
+  height: 65vh;
+}
+
+form {
+  display: flex;
+  justify-content: end;
+  padding: 0 2vw;
+}
+
+/* 실제 박스오피스 내용이 나오는 */
+.viewContent {
+  border: solid 1px #FFFFFF70;
+  height: 90%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+}
+
+.contentHeader {
+  width: 60vw;
+  height: 5vh;
+  border-bottom: solid 2px #FFFFFF70;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+}
+
+.title-Name, .title-Price, .title-Watcher, .title-ChangeRank {
+  display: inline-flex;
+  width: 25vw;
+  margin: 0 2vw;
+  justify-content: center;
+  align-items: center;
+}
+.title-Price {width: 5vw;}
+.title-Watcher {width: 7vw;}
+.title-ChangeRank {width: 5vw;}
+
+.contentBody {
+  color: white;
+}
+
+.contentLine {
+  width: 60vw;
+  height: 5vh;
+  border-bottom: solid 1px #FFFFFF70;
+  color: white;
+  font-size: 1em;
+  display: flex;
+  justify-content: top;
+}
+
+.movie-Rank, .movie-Name, .movie-Price, .movie-Watcher, .movie-ChangeRank {
+  display: inline-flex;
+  width: 2vw;
+  margin: 0 1vw;
+  justify-content: center;
+  align-items: center;
+}
+.movie-Name {width: 22vw; margin-right: 2vw;}
+.movie-Price {width: 8vw; margin-right: 2vw; justify-content: end;}
+.movie-Watcher {width: 7vw; margin-right: 3vw;}
+.movie-ChangeRank {width: 5vw;}
+.font-red {color: rgb(255, 130, 130);}
+.font-blue {color: rgb(120, 120, 255);}

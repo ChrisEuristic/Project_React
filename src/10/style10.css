@@ -17,10 +17,11 @@
   align-items: end;
   border: #282828 solid 1px;
   border-bottom: none;
+  box-shadow: #28282870 2px 0px 2px;
 }
 
 .header {
-  background-color: #282828;;
+  background-color: #282828;
   color: white;
   width: 420px;
   height: 80px;
@@ -39,6 +40,7 @@
   width: 420px;
   height: 600px;
   border: #282828 solid 1px;
+  box-shadow: #28282870 2px 2px 2px;
 }
 
 .w1 {
@@ -50,6 +52,7 @@
   width: 420px;
   height: 600px;
   border: #282828 solid 1px;
+  box-shadow: #28282870 2px 2px 2px;
 }
 
 .w2 {
@@ -60,6 +63,7 @@
   width: 420px;
   height: 600px;
   border: #282828 solid 1px;
+  box-shadow: #28282870 2px 2px 2px;
 }
 
 .bigButton {
@@ -74,6 +78,18 @@
   background-color: white;
 }
 
+.bigButton:hover {
+  background-color: #EEEEEE;
+  box-shadow: #28282870 3px 3px 3px;
+  transition-duration: 200ms;
+}
+
+.bigButton:active {
+  background-color: #EEEEEE;
+  box-shadow: #28282870 3px 3px 3px inset;
+  transition-duration: 100ms;
+}
+
 .homeButton {
   margin: 5px;
   width: 40px;
@@ -85,6 +101,18 @@
   background-color: white;
 }
 
+.homeButton:hover {
+  background-color: #EEEEEE;
+  box-shadow: #28282870 2px 2px 2px;
+  transition-duration: 200ms;
+}
+
+.homeButton:active {
+  background-color: #EEEEEE;
+  box-shadow: #28282870 2px 2px 2px inset;
+  transition-duration: 100ms;
+}
+
 .weatherButton {
   width: 95px;
   height: 40px;
@@ -94,6 +122,18 @@
   border: #282828 solid 1px;
   border-radius: 8px;
   background-color: white;
+}
+
+.weatherButton:hover {
+  background-color: #EEEEEE;
+  box-shadow: #FFFFFF50 2px 2px 5px;
+  transition-duration: 200ms;
+}
+
+.weatherButton:active {
+  background-color: #EEEEEE;
+  box-shadow: #28282870 2px 2px 2px inset;
+  transition-duration: 100ms;
 }
 
 .shortWeatherDiv {
