@@ -9,8 +9,8 @@ const W1 = (props) => {
 
   let a = itemWeatherShort.map((item) => {
     if(item[2] == "코드값")
-      return <div className="shortWeatherDiv"><span className="shortWeatherSpanTitle">{item[0]}</span><span className="shortWeatherSpanContent">없음</span></div>
-    return <div className="shortWeatherDiv"><span className="shortWeatherSpanTitle">{item[0]}</span><span className="shortWeatherSpanContent">{item[1] + item[2]}</span></div>
+      return <div key={item[0]} className="shortWeatherDiv"><span className="shortWeatherSpanTitle">{item[0]}</span><span className="shortWeatherSpanContent">없음</span></div>
+    return <div key={item[0]} className="shortWeatherDiv"><span className="shortWeatherSpanTitle">{item[0]}</span><span className="shortWeatherSpanContent">{item[1] + item[2]}</span></div>
   });
 
   return (
