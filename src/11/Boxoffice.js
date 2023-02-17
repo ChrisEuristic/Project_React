@@ -17,7 +17,7 @@ const Boxoffice = () => {
   };
 
   const viewThumnail = (movieCd) => {
-    fetch(`http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json?key=${myKey}&movieCd=${movieCd}`)
+    fetch(`https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json?key=${myKey}&movieCd=${movieCd}`)
     .then(resp => resp.json())
     .then(item => {
       console.log("item >> ", item.movieInfoResult.movieInfo.movieNm);
