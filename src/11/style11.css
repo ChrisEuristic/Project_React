@@ -96,6 +96,11 @@ form {
   justify-content: top;
 }
 
+.contentLine:hover {
+  color: coral;
+  transition-duration: 200ms;
+}
+
 .movie-Rank, .movie-Name, .movie-Price, .movie-Watcher, .movie-ChangeRank {
   display: inline-flex;
   width: 2vw;
@@ -109,3 +114,38 @@ form {
 .movie-ChangeRank {width: 5vw;}
 .font-red {color: rgb(255, 130, 130);}
 .font-blue {color: rgb(120, 120, 255);}
+
+.popup {
+  position: absolute;
+  top: 35vh;
+  left: 50vw;
+  width: 20vw;
+  height: 20vh;
+  background-color: #FFFFFFEE;
+  color: #282828;
+  font-weight: bold;
+  font-size: 1.5em;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  padding-top: 3vh;
+  animation-name: popupAnim;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+}
+
+.popup-content {
+  font-size: 1rem;
+  font-weight: lighter;
+  display: flex;
+  justify-content: left;
+  width: 15vw;
+  margin-top: 2vh;
+}
+
+@keyframes popupAnim {
+  from { opacity: 0; }
+  to { opacity: 1;}
+}

@@ -6,12 +6,33 @@ const Boxoffice = () => {
 
   const link = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt="
   //const [date, setDate] = useState();
+  const myKey = "b8789756336bdf23b0e1939e2d91f969";
   const pickedDate = useRef();
   const [url, setUrl] = useState();
   const [view, setView] = useState([]);
+  const [thumnail, setThumnail] = useState();
   
   const setPickedDate = () => {
     setUrl(link + (pickedDate.current.value).replaceAll('-',''));
+  };
+
+  const viewThumnail = (movieCd) => {
+    fetch(`http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json?key=${myKey}&movieCd=${movieCd}`)
+    .then(resp => resp.json())
+    .then(item => {
+      console.log("item >> ", item.movieInfoResult.movieInfo.movieNm);
+      setThumnail(
+        <div className='popup'>
+          <div className='popup-title'>{item.movieInfoResult.movieInfo.movieNm}({item.movieInfoResult.movieInfo.prdtYear})</div>
+          <div className='popup-content'>
+            감독({item.movieInfoResult.movieInfo.directors[0].peopleNm})<br />
+            배급사( {
+              item.movieInfoResult.movieInfo.companys.map((item) => item.companyNm + " ")
+            })<br />
+          </div>
+        </div>
+      );
+    })
   };
 
   useEffect(() => {
@@ -26,7 +47,7 @@ const Boxoffice = () => {
           if(item.rankInten < 0) rank = <span key={`cr${index}`} className='movie-ChangeRank font-blue'>{"▼ " + Math.abs(item.rankInten)}</span>;
           return <div key={index} className="contentLine">
             <span key={`rk${index}`} className='movie-Rank'>{item.rank}</span>
-            <span key={`mn${index}`} className='movie-Name'>{item.movieNm}</span>
+            <span key={`mn${index}`} className='movie-Name' onMouseOver={() => viewThumnail(item.movieCd)} onMouseLeave={() => setThumnail()}>{item.movieNm}</span>
             <span key={`pr${index}`} className='movie-Price'>{parseInt(item.salesAmt).toLocaleString('ko-KR')}원</span>
             <span key={`wt${index}`} className='movie-Watcher'>{parseInt(item.audiCnt).toLocaleString('ko-KR')}명</span>
             {rank}
@@ -58,6 +79,7 @@ const Boxoffice = () => {
           </div>
           <div className="contentBody">
             {view}
+            {thumnail}
           </div>
         </div>
       </div>
